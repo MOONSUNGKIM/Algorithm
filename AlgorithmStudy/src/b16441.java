@@ -74,9 +74,9 @@ public class b16441 { // 아기돼지와 늑대
   static void func() {
 	  while(!q.isEmpty()) {
 		  state p = q.poll();
-			if (p.movestate) {
+			if (p.movestate) { // 현재 미끄러지고 있는 상태일 경우 
              int x = p.x+dx[p.d];
-             int y = p.y+dy[p.d];
+             int y = p.y+dy[p.d]; 
              if(x>=0 && y>=0 && x<n && y<m) {
             	 if(map[x][y] == '#') { // 산일경우 빙판에 서있는다 
             		 for(int i =0; i<4; i++) {
@@ -100,17 +100,17 @@ public class b16441 { // 아기돼지와 늑대
              }
 			}
 			
-			else {
+			else { // 미끄러지고 있는 상태 아닐경우 
 				for (int i = 0; i < 4; i++) {
 					int x = p.x + dx[i];
 					int y = p.y + dy[i];
 					if (x >= 0 && y >= 0 && x < n && y < m) {
 						if (v[x][y][i] == 0) {
 							v[x][y][i] = 1;
-							if (map[x][y] == '.') {
+							if (map[x][y] == '.') {  
 							   q.offer(new state(x, y, i, p.movestate));
 							}else if (map[x][y] == '+') { // 빙판
-                               q.offer(new state(x,y,i,true));
+                               q.offer(new state(x,y,i,true)); // 상태변경 
 							}
 						}
 					}
