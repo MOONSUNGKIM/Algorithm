@@ -17,6 +17,7 @@ class sw1768 {
     static class Result {
         public int strike;                                
         public int ball;
+        
 	}
 	
 	private static boolean isValid(int guess[]) {
