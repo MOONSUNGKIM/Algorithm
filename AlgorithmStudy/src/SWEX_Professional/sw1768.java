@@ -1,3 +1,4 @@
+package SWEX_Professional;
 import java.util.Scanner;
 
 class sw1768 {
