@@ -13,6 +13,7 @@ public class a16504 {
 	n = Integer.parseInt(bf.readLine());
 	r = n; c= n;
 	temp = new long[n+1][n+1];
+	
 	for(int i =1; i<=n; i++) {
 		st = new StringTokenizer(bf.readLine());
 		for(int j =1; j<=n; j++) {
