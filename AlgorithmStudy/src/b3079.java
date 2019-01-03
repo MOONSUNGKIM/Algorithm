@@ -5,25 +5,23 @@ import java.util.StringTokenizer;
 
 
 public class b3079 {
-	static long n , m ,arr[], ans, result, max, max2 ;
+	static long n , m ,arr[], ans, result,max ;
  public static void main(String[] args) throws IOException {
 	BufferedReader bf= new BufferedReader(new InputStreamReader(System.in));
 	StringTokenizer st = new StringTokenizer(bf.readLine());
 	n = Integer.parseInt(st.nextToken());
 	m = Integer.parseInt(st.nextToken());
 	arr = new long[100001];
-	max = (long)1e18; // 
-	result = max;
-	max2 = 1;
+	max = 1;
 	
 	for(int i =0; i<n; i++) {
 		arr[i] = Integer.parseInt(bf.readLine());
-		max2 = Math.max(max2, arr[i]); 
+		max = Math.max(max, arr[i]); 
 	}
 	
 	 
 	long left = 0 ; // 최소 
-	long right = (max2*m) -1 ; // 입국심사를 한명에게 몰렸을때가 최대니까  
+	long right = (max*m) -1 ; // 입국심사를 한명에게 몰렸을때가 최대니까  
     
 	while(left <= right) {
 		long sum = 0; 
