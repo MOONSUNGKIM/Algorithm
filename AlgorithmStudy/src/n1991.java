@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-
 public class n1991 { // 트리 순회 
 	static class Node {
 		char data;
@@ -19,7 +18,7 @@ public class n1991 { // 트리 순회
 			if(data!='.') tree = new Node(data);
 			if(leftdata != '.') tree.left = new Node(leftdata);
 			if(rightdata != '.') tree.right = new Node(rightdata);
-		}else {
+		} else {
 			search(tree, data, leftdata, rightdata);
 		}
 	}
