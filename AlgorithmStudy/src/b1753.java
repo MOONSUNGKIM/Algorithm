@@ -55,6 +55,7 @@ public class b1753 { // 최단경로 - > 다익스트라 (우선순위큐 ) 인�
 	
 	pq.offer(new state(start, 0));
 	d[ start ] = 0;
+	
 	while(!pq.isEmpty()){
 		state p = pq.poll();
 		if(li[p.end] == null) continue;
