@@ -4,11 +4,10 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-
 public class b4195 { // 친구 네트워크 disjoint - set 적용 
 	static int n,parent[],cnt[];
 	static HashMap<String,Integer> hm;
- public static void main(String[] args) throws IOException{
+ public static void main(String[] args) throws IOException {
 	BufferedReader bf= new BufferedReader(new InputStreamReader(System.in));
 	StringTokenizer st ; 
 	int testcase = Integer.parseInt(bf.readLine());
@@ -22,7 +21,7 @@ public class b4195 { // 친구 네트워크 disjoint - set 적용
 		hm = new HashMap<>();
 		
 		
-		for(int i =0; i<n; i++){
+		for(int i =0; i<n; i++) {
 			st = new StringTokenizer(bf.readLine());
 			String a = st.nextToken();
 			String b = st.nextToken();
@@ -38,16 +37,18 @@ public class b4195 { // 친구 네트워크 disjoint - set 적용
 	}
 	bf.close();
  }
+ 
  static void makeSet() {
-	 for(int i =0; i<n*2+1; i++){
+	 for(int i =0; i<n*2+1; i++) {
 		 parent[i] = i;
 		 cnt[i] = 1;
 	 }
  }
+ 
  static void unionSet(int a, int b) {
 	 a = findSet(a);
 	 b = findSet(b);
-	 if(a == b){
+	 if(a == b) {
 		 System.out.println(cnt[b]);
 		 return;
 	 }
@@ -56,8 +57,10 @@ public class b4195 { // 친구 네트워크 disjoint - set 적용
 	 cnt[a] = 1;
 	 System.out.println(cnt[b]);
  }
- static int findSet(int num){
+ 
+ static int findSet(int num) {
 	 if(parent[num] == num) return num;
 	 return parent[num] = findSet(parent[num]);
  }
+ 
 }
