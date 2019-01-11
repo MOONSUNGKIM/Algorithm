@@ -20,9 +20,9 @@ public class n1717 { // 집합의 표현
 		int order = Integer.parseInt(st.nextToken());
 		int a = Integer.parseInt(st.nextToken());
 		int b = Integer.parseInt(st.nextToken());
-		if(order == 0){
+		if(order == 0) {
 			unionSet(a,b);
-		}else if(order == 1){
+		}else if(order == 1) {
 			if(findSet(a) == findSet(b)) {
 			 System.out.println("YES");	
 			}else System.out.println("NO");
@@ -47,7 +47,6 @@ public class n1717 { // 집합의 표현
  }
  
  static int findSet(int cur) {
-	 
 	 if(parent[cur] == cur) return cur;
 	 return parent[cur] = findSet(parent[cur]);
 	 
