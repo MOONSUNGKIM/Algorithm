@@ -12,7 +12,6 @@ public class a1197 { // 최소 스패닝 트리
 	static class state implements Comparable<state> {
 		int curnum ;
 		long cost;
-		
 		state(int curnum , long cost) {
 			this.curnum = curnum;
 			this.cost = cost;
@@ -68,10 +67,9 @@ public class a1197 { // 최소 스패닝 트리
 	    	}
 	    }
 	}
-	
+
 	System.out.println(sumcost);
 	bf.close();
  }
- 
- 
+  
 }

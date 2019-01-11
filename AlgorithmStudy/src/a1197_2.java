@@ -6,19 +6,15 @@ import java.util.StringTokenizer;
 
 public class a1197_2 { // 최소 스패닝 트리 
 	//크루스칼 알고리즘 적용 
-	static class state implements Comparable<state>{
+	static class state {
 		int curnum,curnum2,cost;
 		state(int curnum, int curnum2, int cost){
 			this.curnum = curnum;
 			this.curnum2 = curnum2;
 			this.cost = cost;
 		}
-		public int compareTo(state s){
-			if(this.cost > s.cost) return 1;
-			else if(this.cost == s.cost) return 0;
-			else return -1;
-		}
 	}
+	
 	static int n , m ,parent[];
 	static state arr[];
 	
@@ -53,6 +49,7 @@ public class a1197_2 { // 최소 스패닝 트리
 		selectcount++;
 		if(selectcount>=n-1) break;
 	}
+	
 	System.out.println(sumcost);
 	bf.close();
 }
@@ -76,7 +73,7 @@ public class a1197_2 { // 최소 스패닝 트리
 	 if(R>s) quickSort(s,R);
  }
  
- static void makeSet(){
+ static void makeSet() {
 	 for(int i =0; i<=n; i++){
 		 parent[i] = i;
 	 }
