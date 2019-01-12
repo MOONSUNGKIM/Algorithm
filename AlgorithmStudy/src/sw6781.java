@@ -47,7 +47,7 @@ public class sw6781 { //삼삼 트리플 게임
 	    		cnt = 0;
 	     }else return;
 	     
-	     if( setcount == 3){
+	     if( setcount == 3) { 
 	    	 finish = 1;
 	    	 return;
 	     }

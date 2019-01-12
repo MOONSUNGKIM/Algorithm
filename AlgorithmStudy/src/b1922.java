@@ -20,7 +20,7 @@ public class b1922 { // 네트워크연결
 		}
 	}
    
-	for(int i =0; i<m; i++){
+	for(int i =0; i<m; i++) {
 		st = new StringTokenizer(bf.readLine());
 		int a = Integer.parseInt(st.nextToken());
 		int b = Integer.parseInt(st.nextToken());
@@ -34,7 +34,7 @@ public class b1922 { // 네트워크연결
 	weight[1] = 0; //임의 시작정점 1로 잡음 따라서 0 으로 초기화 
 	int sumcost = 0;
 	
-	for(int k =2; k<=n; k++) { // 2~ n 만큼 돌면서  노드선택	
+	for(int k =1; k<n; k++) { // 1~ n 만큼 돌면서  노드선택	
 		int minindex =0  ;
 		int minweight = 2100000000;
 		//이미 선택된것 중 선택 안된 노드를 방문해야한다 
