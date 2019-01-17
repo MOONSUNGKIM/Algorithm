@@ -13,9 +13,9 @@ public class n1890 { // 점프
 	n = Integer.parseInt(bf.readLine());
 	map = new int[n][n];
 	d = new long[n][n];
-	for(int i =0; i<n; i++){
+	for(int i =0; i<n; i++) {
 		st = new StringTokenizer(bf.readLine());
-		for(int j =0; j<n; j++){
+		for(int j =0; j<n; j++) {
 			map[i][j]= Integer.parseInt(st.nextToken());
 			d[i][j] = -1;
 		}
