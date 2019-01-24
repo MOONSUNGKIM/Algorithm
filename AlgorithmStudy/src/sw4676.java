@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class sw4676 {
+public class sw4676 { // 
 	static String str;
 	static int h , insert[];
 	static StringBuilder sb;
