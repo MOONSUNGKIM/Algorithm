@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-
 public class sw6808 { //규영이와 인영이의 카드게임 
 	static int  arr[], arr2[], v[] ,win1,win2, temp[];
  public static void main(String[] args) throws IOException {
@@ -21,12 +20,14 @@ public class sw6808 { //규영이와 인영이의 카드게임
 			arr[i]= Integer.parseInt(st.nextToken());
 			v[arr[i]] +=1;
 		}
+		
 		int index = 0;
 		for(int i=1; i<=18; i++) {
 			if(v[i] == 0) {
 				arr2[index++] = i;
 			}
 		}
+		
 		win1 = 0;
 		win2 = 0;
 		func(0);
@@ -44,6 +45,7 @@ public class sw6808 { //규영이와 인영이의 카드게임
 		 func2();
 		 return ;
 	 }
+	 
 	 for(int i =0; i<9; i++) {
 		if(visit[i] == 0) {
 			visit[i] = 1;
@@ -69,6 +71,5 @@ public class sw6808 { //규영이와 인영이의 카드게임
 	 else if(w1 < w2) win2+=1;
 	 
  }
- 
- 
+  
 }
