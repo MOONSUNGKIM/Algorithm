@@ -4,7 +4,6 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-
 public class b16933 { //벽부수고 이동하기 3 
 	// 4차원 시간초과 
 	// 자기위치 대기 큐에넣는것 시간초과 
@@ -65,7 +64,6 @@ public class b16933 { //벽부수고 이동하기 3
 			int x = p.x+dx[i];
 			int y=  p.y+dy[i];
 			if(x>=1 && y>=1 && x<=n && y<=m) {
-				
 			 if(map[x][y] ==0) { // move 
 				 if(v[x][y][p.kc] == 0 ) {
 					 v[x][y][p.kc] = 1;
@@ -74,14 +72,14 @@ public class b16933 { //벽부수고 이동하기 3
 					 else if(dn == 1) dn = 0;
 					 pq.offer(new state(x, y, (p.c+1), p.kc,dn ));
 				 }
-			 }else if(map[x][y] == 1) { //not move
+			 }else if(map[x][y] == 1 && p.kc+1 <= k) { //not move
 				 if((p.dn) == 0){ // 낮일때만 부스는거 가능
-					 if( (p.kc+1) <=k && v[x][y][(p.kc+1)] ==0) {
+					 if( v[x][y][(p.kc+1)] ==0) {
 						 v[x][y][(p.kc+1)] = 1;
 						 pq.offer(new state(x,y,(p.c+1),(p.kc+1),1));
 					 }
 				 }else { //밤 -> 낮이되기위해 하루 더 지나야하니 카운트 +2 
-					 if((p.kc+1) <=k && v[x][y][(p.kc+1)]== 0) {
+					 if( v[x][y][(p.kc+1)]== 0) {
 						 v[x][y][(p.kc+1)] =1;
 						 pq.offer(new state(x,y,(p.c+2),(p.kc+1),1)); // 그대로 -> 낮밤낮 , 밤낮밤 으로 바뀜 
 					 }
