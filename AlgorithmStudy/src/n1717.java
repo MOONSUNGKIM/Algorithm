@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 public class n1717 { // 집합의 표현 
 	//disjoint-set 적용 
 	static int n , m ,parent[];
+
  public static void main(String[] args) throws IOException {
 	BufferedReader bf= new BufferedReader(new InputStreamReader(System.in));
 	StringTokenizer st = new StringTokenizer(bf.readLine());
@@ -42,8 +43,9 @@ public class n1717 { // 집합의 표현
  static void unionSet(int a, int b) {
 	 a = findSet(a);
 	 b = findSet(b);
-	 if(a==b) return;
-	 parent[a] = b;
+	 //parent[a] = b;
+	 if(a < b) parent[b] = a;
+	 else parent[a] = b;
  }
  
  static int findSet(int cur) {
@@ -51,4 +53,5 @@ public class n1717 { // 집합의 표현
 	 return parent[cur] = findSet(parent[cur]);
 	 
  }
+ 
 }
